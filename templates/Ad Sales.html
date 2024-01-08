@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/png" href="/static/images/logo.jpg">
+  <title>Ad Sales Manager</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/job-post-styles.css') }}">
+
+
+  <script>
+    function toggleForm() {
+      var form = document.getElementById("jobApplicationForm");
+      form.style.display = (form.style.display === "none") ? "block" : "none";
+    }
+  </script>
+
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="left">
+          <a class="title" href="/">JobTech</a>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Trending</a></li>
+            <li><a href="/">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      
+      <!--Background-img-->
+      <div class="background-image">
+       
+      </div>
+  
+
+
+
+  <div class="container">
+  
+
+    <h1>Ad Sales Manager</h1>
+    <h5>Job ID: 123432</h5>
+  
+   
+    <div class="role-description">
+      <h2>DESCRIPTION:</h2>
+      <p>
+        We are seeking an experienced and motivated Ad Sales Manager to join our team. In this role, you will be responsible for developing and implementing strategic advertising sales plans, fostering client relationships, and driving revenue growth through advertising sales. The ideal candidate should have a proven track record in sales, excellent communication skills, and a deep understanding of the advertising industry.
+      </p>
+      <h2>About the Role:</h2>
+      <p>
+        Develop and execute strategic plans to achieve sales targets and expand our client base.
+        Identify new business opportunities and partnerships to maximize revenue.
+        Build and maintain strong relationships with clients, agencies, and advertising partners.
+        Collaborate with the marketing team to create compelling sales pitches and proposals.
+        Monitor industry trends and competitor activities to identify market opportunities.    
+      </p>
+    </div>
+    <div class="requirements">
+      <h2>Expectations/Requirements:</h2>
+      <ol>
+        <li>Bachelor's degree in Marketing, Business Administration, or related field.</li>
+        <li>Proven experience in advertising sales, with a minimum of 5 years in a similar role.</li>
+        <li>Strong negotiation and presentation skills.</li>
+        <li>Familiarity with CRM software and sales analytics tools.</li> 
+        <li>Excellent communication and interpersonal abilities.</li>
+      </ol>
+    </div>
+    <div class="superpowers">
+      <h2>BASIC QUALIFICATIONS:</h2>
+      <ul>
+        <li>Bachelor's degree in Marketing, Business Administration, or related field.</li>
+        <li>Proven track record of meeting and exceeding sales targets.</li>
+        <li>Strong understanding of advertising principles and industry trends.</li> 
+      </ul>
+    </div>
+    
+    <div class="divider"></div>
+
+
+    <div class="apply-button-bottom">
+        <button onclick="toggleForm()">Apply For this Job</button>
+      </div>
+
+
+<!-- Hidden form  -->
+<div id="jobApplicationForm">
+    <h2>Job Application Form</h2>
+    <form onsubmit="return validateForm()">
+     
+      <label class="required" for="resume">Upload Resume:</label>
+      <input type="file" id="resume" name="resume" required><br><br>
+
+      <label class="required" for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label class="required" for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label class="required" for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label class="required" for="currentCompany">Current Company:</label>
+      <input type="text" id="currentCompany" name="currentCompany" required><br><br>
+
+
+      <h2>Links</h2>
+
+      <!-- LinkedIn -->
+      <label for="linkedin">LinkedIn:</label>
+      <input type="url" id="linkedin" name="linkedin"><br><br>
+    
+      <!-- GitHub -->
+      <label for="github">GitHub:</label>
+      <input type="url" id="github" name="github"><br><br>
+
+
+      <h2>Additional Information</h2>
+      <label for="additionalInfo">Additional Information:</label><br>
+      <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50"></textarea><br><br>
+    
+  
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+ 
+  <div id="successMessage" style="display: none;">
+    <p>Thanks! Submitted Successfully.</p>
+  </div>
+  
+
+
+    <!-- Divider line -->
+      <div class="divider"></div>
+
+    <div class="footer">
+       <p>© Copyright JobTech(Made By Jay Panchal.)</p>
+    </div>
+
+  </div>
+
+  
+  <script src="{{ url_for('static', filename='job-post.js') }}"></script>
+
+  <script>
+    document.querySelector('#jobApplicationForm form').addEventListener('submit', function () {
+      setTimeout(function () {
+        location.reload(); 
+      }, 3000); 
+    });
+  </script>
+
+</body>
+</html>

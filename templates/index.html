@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/static/images/logo.jpg">
+    <title>JobTech</title>
+
+    <!--bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous">
+
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+  </head>
+
+<body>
+
+    <!--Navbr section-->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark background-image">
+        <div class="left">
+          <a class="navbar-brand" href="/">JobTech</a>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="#search">Home</a></li>
+            <li><a href="#trending">Trending</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+    
+
+
+    <!--Middle section-->
+    <section id="search" class="search">
+      <h2>Find Your Dream Job</h2>
+
+      <select id="jobFilter" onchange="filterList()">
+
+        <option value="all">All Jobs</option>
+        <option value="Amazon">Sr Events Manager, India Consumables</option>
+        <option value="Manage">Fullstack Developer</option>
+        <option value="Flipkart">Software Engineer</option>
+        <option value="Paytm">Junior Developer</option>
+        <option value="InsightGeeks">Flutter Developer</option>
+        <option value="Meesho">Android Developer</option>
+        <option value="Dream11">Ad Sales Manager</option>
+
+      </select>
+
+      <select id="locationFilter" onchange="filterList()">
+        <option value="all">All Locations</option>
+        <option value="India">India only</option>
+        <option value="USA">USA only</option>
+        <option value="UK">UK only</option>
+      </select>
+
+      <select id="typeFilter" onchange="filterList()">
+        <option value="all">Job Types</option>
+        <option value="Full Time">Full Time</option>
+        <option value="Part Time">Part Time</option>
+      </select>
+
+     
+      <!--Job Listing section-->
+      <section>
+
+        <div class="job-listings">
+
+          <div class="list list1 list-1">
+
+            <div class="text-info">
+              <p><span class="word1">Amazon</span><span
+                  class="new">New!</span></p>
+                  <p class="word2">
+                    Sr Events Manager, India Consumables
+                  </p>
+              <p class="word3"><span class="date">1d ago</span><span
+                  class="time">Full Time</span><span class="place">USA
+                  only</span></p>
+            </div>
+
+            <div class="apply-button">
+              <a href="/software" class="apply-btn">Apply</a>
+            </div>
+
+            <hr>
+
+          </div>
+
+          <div class="list list1 list-2">
+
+
+            <div class="text-info">
+              <p><span class="word1">Manage</span><span
+                  class="new">New!</span></p>
+              <p class="word2">
+             Fullstack Developer</p>
+              <p class="word3"><span class="date">1d ago</span><span
+                  class="time">Part Time</span><span
+                  class="place">Remote</span></p>
+            </div>
+
+            
+            <div class="apply-button">
+              <a href="/fullstack" class="apply-btn">Apply</a>
+            </div>
+
+            <hr>
+          </div>
+
+          <div class="list list-3">
+
+        
+            <div class="text-info">
+              <p><span class="word1">Paytm</span></p>
+              <p class="word2">Junior Frontend Developer</p>
+              <p class="word3"><span class="date">2d ago</span><span
+                  class="time">Part Time</span><span class="place">USA
+                  only</span></p>
+            </div>
+
+            <div class="apply-button">
+              <a href="/JuniorFront" class="apply-btn">Apply</a>
+            </div>
+
+            <hr>
+          </div>
+
+         
+
+          <div class="list list-4">
+
+            <div class="text-info">
+              <p><span class="word1">Flipkart</span></p>
+              <p class="word2">Software Engineer</p>
+              <p class="word3"><span class="date">1w ago</span><span
+                  class="time">Full Time</span><span
+                  class="place">India</span></p>
+            </div>
+
+            <div class="apply-button">
+              <a href="/softwareEng" class="apply-btn">Apply</a>
+            </div>
+
+
+            <hr>
+
+          </div>
+
+          <div class="list list-5">
+
+          
+            <div class="text-info">
+              <p><span class="word1">FaceIt</span></p>
+              <p class="word2">Junior Backend Developer</p>
+              <p class="word3"><span class="date">2w ago</span><span
+                  class="time">Full Time</span><span class="place">UK
+                  only</span></p>
+            </div>
+            <div class="apply-button">
+              <a href="/JuniorBackend" class="apply-btn">Apply</a>
+            </div>
+
+            <hr>
+          </div>
+
+          <div class="list list-6">
+
+            
+            <div class="text-info">
+              <p><span class="word1">InsightGeeks</span></p>
+              <p class="word2">Flutter Developer</p>
+              <p class="word3"><span class="date">3w ago</span><span
+                  class="time">Full Time</span><span class="place">UK
+                  only</span></p>
+            </div>
+            <div class="apply-button">
+              <a href="/Flutter" class="apply-btn">Apply</a>
+            </div>
+
+            <hr>
+          </div>
+
+
+          <div class="list list-7">
+
+            
+            <div class="text-info">
+              <p><span class="word1">Meesho</span></p>
+              <p class="word2">Android Developer</p>
+              <p class="word3"><span class="date">3w ago</span><span
+                  class="time">Full Time</span><span class="place">India</span></p>
+            </div>
+            <div class="apply-button">
+              <a href="/Android" class="apply-btn">Apply</a>
+            </div>
+
+            <hr>
+          </div>
+
+
+          <div class="list list-8">
+
+            
+            <div class="text-info">
+              <p><span class="word1">Dream11</span></p>
+              <p class="word2">Ad Sales Manager</p>
+              <p class="word3"><span class="date">7w ago</span><span
+                  class="time">Part Time</span><span class="place">India</span></p>
+            </div>
+            <div class="apply-button">
+              <a href="/AdSales" class="apply-btn">Apply</a>
+            </div>
+
+            <hr>
+          </div>
+
+         
+        </div>
+
+      </section>
+
+    <!--Trending Job Section -->
+
+      <section id="trending" class="trending-jobs">
+        <h2>Trending Jobs</h2>
+        <div class="trending-job-list">
+          <div class="trending-job">
+            <p>&#128640; Sr Events Manager, India Consumables &#128640;</p>
+            <a href="/software" class="apply-btn">Apply</a>
+          </div>
+          <div class="trending-job">
+            <p>&#128640; Fullstack Developer &#128640;</p>
+            <a href="/fullstack" class="apply-btn">Apply</a>
+          </div>
+          <div class="trending-job">
+            <p>&#128640; Junior Frontend Developer &#128640;</p>
+            <a href="/JuniorFront" class="apply-btn">Apply</a>
+          </div>
+        </div>
+      </section>
+
+      <!--Contact US page-->
+
+      <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, please feel free to reach out
+          to us:</p>
+        <form id="contactForm" action="/submit_contact" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit" id="submitButton">Submit</button>
+        </form>
+        <div id="notification" style="display: none;">Thank you for contacting
+          us! We Will get back to you Shortly.</div>
+      </section>
+
+      <hr>
+
+      <!--Footer Section-->
+
+      <footer id="footer">
+
+        <i class="social-icon fa-brands fa-twitter"></i>
+        <i class="social-icon fa-brands fa-facebook"></i>
+        <i class="social-icon fa-brands fa-instagram"></i>
+        <i class="social-icon fa-solid fa-envelope"></i>
+
+        <p>© Copyright JobTech (Made By Jay Panchal.)</p>
+
+      </footer>
+
+  
+      <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+      <!--Filter Job List Using java script-->
+
+      <script>
+        function filterList() {
+          const jobFilterValue = document.getElementById('jobFilter').value;
+          const locationFilterValue = document.getElementById('locationFilter').value;
+          const typeFilterValue = document.getElementById('typeFilter').value;
+          const jobListings = document.querySelectorAll('.job-listings .list'); //logic used
+      
+          jobListings.forEach((job) => {
+            const jobName = job.querySelector('.word1').textContent.trim();
+            const jobLocation = job.querySelector('.place').textContent.trim();
+            const jobType = job.querySelector('.time').textContent.trim();
+      
+            const matchesJob = jobFilterValue === 'all' || jobName === jobFilterValue;
+            const matchesLocation = locationFilterValue === 'all' || jobLocation.includes(locationFilterValue);
+            const matchesType = typeFilterValue === 'all' || jobType === typeFilterValue;
+      
+            if (matchesJob && matchesLocation && matchesType) {
+              job.style.display = 'block'; // Show job listing
+            } else {
+              job.style.display = 'none'; // Hide job listing
+            }
+          });
+        }
+      </script>
+
+      <!--Contact Us Form Function-->
+
+    <script>
+     document.getElementById("contactForm").addEventListener("submit", function(event) {
+     event.preventDefault(); // using this default submission action is stopped.
+
+    // Show notification
+    document.getElementById("notification").style.display = "block";
+
+    
+    setTimeout(function() {
+      document.getElementById("contactForm").reset(); 
+      document.getElementById("notification").style.display = "none"; 
+      window.location.href = "#search"; 
+    }, 3000); 
+  });
+
+ 
+  window.onload = function() {
+    if (performance.navigation.type === 1) { //it identifies if the page is refreshed.
+      // Page is refreshed
+      document.getElementById("notification").style.display = "none"; 
+      sessionStorage.removeItem("contacted"); 
+    }
+  };
+</script>
+
+</body>
+</html>

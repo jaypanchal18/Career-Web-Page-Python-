@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/png" href="/static/images/logo.jpg">
+  <title>Junior-Backend Developer</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/job-post-styles.css') }}">
+
+
+  <script>
+    function toggleForm() {
+      var form = document.getElementById("jobApplicationForm");
+      form.style.display = (form.style.display === "none") ? "block" : "none";
+    }
+  </script>
+
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="left">
+          <a class="title" href="/">JobTech</a>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Trending</a></li>
+            <li><a href="/">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      
+      <!--Background-img-->
+      <div class="background-image">
+       
+      </div>
+  
+
+
+
+  <div class="container">
+  
+
+    <h1>Junior-Backend</h1>
+    <h5>Job ID: 2511698</h5>
+  
+   
+    <div class="role-description">
+      <h2>DESCRIPTION:</h2>
+      <p>
+        We're on the lookout for a Junior Backend Developer to join our team and contribute to the development of robust server-side applications. This role offers an excellent opportunity to work alongside experienced developers, learn from them, and actively participate in building scalable and efficient backend solutions.
+      </p>
+      <h2>About the Role:</h2>
+      <p>
+        Collaborate with senior developers to design, develop, and maintain backend services and applications.
+        Assist in coding, testing, and debugging backend systems to ensure functionality and optimization.
+        Learn and apply best practices in backend development, working with languages like Python, Java, Node.js, etc.
+        Work closely with frontend developers to integrate user-facing elements with server-side logic.
+        Participate in code reviews, discussions on architecture, and contribute innovative ideas to projects.
+      </p>
+    </div>
+    <div class="requirements">
+      <h2>Expectations/Requirements:</h2>
+      <ol>
+        <li>Bachelor’s degree in Computer Science, Engineering</li>
+        <li>Understanding of databases (SQL and/or NoSQL) and data modeling concepts.</li>
+        <li>SStrong problem-solving skills and attention to detail.</li>
+        <li>Familiarity with software testing principles and frameworks.</li> 
+        <li>EGood communication skills and ability to work effectively within a team. </li>
+      </ol>
+    </div>
+    <div class="superpowers">
+      <h2>BASIC QUALIFICATIONS:</h2>
+      <ul>
+        <li>5+ years of experience as a Software Engineer or similar role.</li>
+        <li>Familiarity with backend programming languages (e.g., Python, Java, Node.js, etc.)</li>
+        <li>Familiarity with software testing principles and frameworks.</li>
+        
+      </ul>
+    </div>
+    
+    <div class="divider"></div>
+
+
+    <div class="apply-button-bottom">
+        <button onclick="toggleForm()">Apply For this Job</button>
+      </div>
+
+
+<!-- Hidden form -->
+<div id="jobApplicationForm">
+    <h2>Job Application Form</h2>
+    <form onsubmit="return validateForm()">
+     
+
+      <label class="required" for="resume">Upload Resume:</label>
+      <input type="file" id="resume" name="resume" required><br><br>
+
+      <label class="required" for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label class="required" for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label class="required" for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label class="required" for="currentCompany">Current Company:</label>
+      <input type="text" id="currentCompany" name="currentCompany" required><br><br>
+
+
+      <h2>Links</h2>
+
+      <!-- LinkedIn -->
+      <label for="linkedin">LinkedIn:</label>
+      <input type="url" id="linkedin" name="linkedin"><br><br>
+    
+      <!-- GitHub -->
+      <label for="github">GitHub:</label>
+      <input type="url" id="github" name="github"><br><br>
+
+
+      <h2>Additional Information</h2>
+      <label for="additionalInfo">Additional Information:</label><br>
+      <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50"></textarea><br><br>
+    
+  
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+ 
+  <div id="successMessage" style="display: none;">
+    <p>Thanks! Submitted successfully.</p>
+  </div>
+  
+
+
+  <!-- Divider line -->
+      <div class="divider"></div> 
+    <div class="footer">
+     
+
+        <p>© Copyright JobTech(Made By Jay Panchal.)</p>
+    </div>
+
+  </div>
+
+  
+  <script src="{{ url_for('static', filename='job-post.js') }}"></script>
+
+  <script>
+    document.querySelector('#jobApplicationForm form').addEventListener('submit', function () {
+      setTimeout(function () {
+        location.reload(); 
+      }, 3000); 
+    });
+  </script>
+
+</body>
+</html>

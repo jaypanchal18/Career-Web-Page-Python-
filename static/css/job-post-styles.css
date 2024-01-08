@@ -1,0 +1,209 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+  }
+
+
+/*Navbar section */
+  
+  .navbar {
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .navbar .left .title {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar .right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+  }
+  
+  .navbar .right ul li {
+    margin-right: 20px;
+  }
+  
+  .navbar .right ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar .right ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .navbar .right ul li a:hover {
+    text-decoration: underline;
+  }
+
+
+  .background-image {
+   
+    background-image: url('/static/images/about_1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    opacity: 0.7; 
+    position: relative;
+    z-index: -1;
+  }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  p {
+    color: #666;
+  }
+  
+  .role-description {
+    margin-bottom: 30px;
+  }
+  
+  .requirements, .superpowers, .why-join {
+    margin-bottom: 20px;
+  }
+
+/* top-button-styles */
+.container {
+  position: relative;
+}
+
+.apply-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.apply-button button {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button button:hover {
+  background-color: #27ae60;
+}
+
+
+/* bottom-button-styles */
+.apply-button-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px; 
+}
+
+.apply-button-bottom button {
+  padding: 15px 30px; 
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px; 
+}
+
+.apply-button-bottom button:hover {
+  background-color: #219653;
+}
+
+
+
+
+
+
+/* Styles for the job application form */
+#jobApplicationForm {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+  
+#jobApplicationForm h2 {
+  margin-bottom: 20px;
+}
+
+#jobApplicationForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+#jobApplicationForm label {
+  margin-bottom: 8px;
+}
+
+#jobApplicationForm input[type="text"],
+#jobApplicationForm input[type="email"],
+#jobApplicationForm input[type="file"],
+#jobApplicationForm input[type="submit"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+#jobApplicationForm input[type="submit"] {
+  background-color: #27ae60;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#jobApplicationForm input[type="submit"]:hover {
+  background-color: #219653;
+}
+
+
+.required::after {
+  content: ' *';
+  color: red;
+}
+
+
+/*Footer*/
+.divider {
+  border-top: 1px solid #ccc;
+  margin-top: 40px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+
+

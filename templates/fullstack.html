@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/png" href="/static/images/logo.jpg">
+  <title>FullStack</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/job-post-styles.css') }}">
+
+
+  <script>
+    function toggleForm() {
+      var form = document.getElementById("jobApplicationForm");
+      form.style.display = (form.style.display === "none") ? "block" : "none";
+    }
+  </script>
+
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="left">
+          <a class="title" href="/">JobTech</a>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Trending</a></li>
+            <li><a href="/">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      
+      <!--Background-img-->
+      <div class="background-image">
+       
+      </div>
+  
+
+
+
+  <div class="container">
+  
+
+    <h1>Full Stack Developer</h1>
+    <h5>Job ID: 2505</h5>
+  
+   
+    <div class="role-description">
+      <h2>DESCRIPTION:</h2>
+      <p>
+        We are seeking a talented Full Stack Developer to join our dynamic team. The ideal candidate will be responsible for developing and maintaining both front-end and back-end applications, collaborating with cross-functional teams to define, design, and ship new features, and continuously discovering and implementing new technologies to maximize development efficiency.
+      </p>
+      <h2>About the Role:</h2>
+      <p>
+        Develop and maintain scalable, secure, and high-performance web applications.
+        Collaborate with cross-functional teams to define project requirements and deliver features.
+        Design user interactions on web pages, ensuring responsiveness and a seamless user experience.
+        Troubleshoot and debug applications to optimize performance.
+        Stay updated with emerging technologies and industry trends to continuously improve our development processes.
+      </p>
+    </div>
+    <div class="requirements">
+      <h2>Expectations/Requirements:</h2>
+      <ol>
+        <li>Bachelor’s degree in Computer Science, Engineering, or related field (or equivalent experience).</li>
+        <li>Proven experience as a Full Stack Developer or similar role.</li>
+        <li>Proficiency in front-end technologies such as HTML5, CSS3, JavaScript, and modern JS frameworks/libraries (e.g., React, Angular, Vue.js).</li>
+        <li>Excellent communication and collaboration skills.</li> 
+        <li>Familiarity with databases (SQL and NoSQL), web servers, and RESTful APIs. </li>
+      </ol>
+    </div>
+    <div class="superpowers">
+      <h2>BASIC QUALIFICATIONS:</h2>
+      <ul>
+        <li> 5+ years years of experience as a Full Stack Developer or similar role.</li>
+        <li>Experience with back-end development using languages like Node.js, Python, or Java.</li>
+        <li>Familiarity with databases (SQL and NoSQL), web servers, and RESTful APIs.</li>
+        
+      </ul>
+    </div>
+    
+    <div class="divider"></div>
+
+
+    <div class="apply-button-bottom">
+        <button onclick="toggleForm()">Apply For this Job</button>
+      </div>
+
+
+<!-- Hidden form -->
+<div id="jobApplicationForm">
+    <h2>Job Application Form</h2>
+    <form onsubmit="return validateForm()">
+     
+
+      <label class="required" for="resume">Upload Resume:</label>
+      <input type="file" id="resume" name="resume" required><br><br>
+
+      <label class="required" for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label class="required" for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label class="required" for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label class="required" for="currentCompany">Current Company:</label>
+      <input type="text" id="currentCompany" name="currentCompany" required><br><br>
+
+
+      <h2>Links</h2>
+
+      <!-- LinkedIn -->
+      <label for="linkedin">LinkedIn:</label>
+      <input type="url" id="linkedin" name="linkedin"><br><br>
+    
+      <!-- GitHub -->
+      <label for="github">GitHub:</label>
+      <input type="url" id="github" name="github"><br><br>
+
+
+      <h2>Additional Information</h2>
+      <label for="additionalInfo">Additional Information:</label><br>
+      <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50"></textarea><br><br>
+    
+  
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+  
+  <div id="successMessage" style="display: none;">
+    <p>Thanks! Submitted successfully.</p>
+  </div>
+  
+
+
+    <!-- Divider line -->
+      <div class="divider"></div> 
+    <div class="footer">
+      <p>© Copyright JobTech(Made By Jay Panchal.)</p>
+    </div>
+
+  </div>
+
+  
+  <script src="{{ url_for('static', filename='job-post.js') }}"></script>
+
+  <script>
+    document.querySelector('#jobApplicationForm form').addEventListener('submit', function () {
+      setTimeout(function () {
+        location.reload();
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>
